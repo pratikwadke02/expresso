@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1076114914482",
+    "project_id": "expresso-634f2",
+    "storage_bucket": "expresso-634f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076114914482:android:f9376200c95ad9de069dab",
+        "android_client_info": {
+          "package_name": "com.pratik.expresso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076114914482-4pn3qvkpskfn8m37rsm54dk4ov12h8qo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYwBz_wYen-h6Okmax8dTTtU_X_98Z17s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076114914482-4pn3qvkpskfn8m37rsm54dk4ov12h8qo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
