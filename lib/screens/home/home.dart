@@ -31,8 +31,9 @@ class Home extends StatelessWidget {
       });
     }
       return StreamProvider<List<Brew>?>.value(
-      value: DatabaseService(uid: '').brews,
-      initialData: [],
+
+      value: DatabaseService(uid: user!.uid).brews,
+      initialData: null,
       child: Scaffold(
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
@@ -40,8 +41,9 @@ class Home extends StatelessWidget {
           elevation: 0.0,
           title: Text('eXpresso'),
           actions: [
-            FlatButton.icon(onPressed: ()async{
-              await _auth.signOut();
+            FlatButton.icon(
+              onPressed: ()async{
+                await _auth.signOut();
             },
             icon: Icon(Icons.person),
             label: Text('logout'),
@@ -55,7 +57,15 @@ class Home extends StatelessWidget {
               )
           ],
         ),
-        body: eXpressoList(),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/coffee_bg.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: eXpressoList()
+          ),
       ),
     );
   }

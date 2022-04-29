@@ -12,11 +12,8 @@ class AuthService{
   }
 
   //auth change user stream
-  Stream<MyUser?>get cust {
-    return _auth
-    .authStateChanges()
-    .map((User? user) => _userFromCredUser(user!));
-    // return _auth.authStateChanges().map(_userFromCredUser);
+  Stream<MyUser?>get user {
+    return _auth.authStateChanges().map(_userFromCredUser);
   }
   //underscore for private
 

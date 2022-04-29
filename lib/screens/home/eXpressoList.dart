@@ -16,20 +16,19 @@ class _eXpressoListState extends State<eXpressoList> {
 
   @override
   Widget build(BuildContext context) {
-    final brews = Provider.of<List<Brew>>(context);
+    final brews = Provider.of<List<Brew>?>(context);
 
   // print(brews.documents);
-    brews.forEach((brew) {
-      print(brew.name);
-      print(brew.sugars);
-      print(brew.strength);
-    });
+    // brews.forEach((brew) {
+    //   print(brew.name);
+    //   print(brew.sugars);
+    //   print(brew.strength);
+    // });
 
     return ListView.builder(
-      itemCount: brews.length,
-      itemBuilder: (context, index) {
-        return BrewTile(brew: brews[index]);
-      },
-    );
+      itemBuilder: ((context, index) {
+        return BrewTile(brew: brews![index]);
+      }),
+      itemCount: brews?.length ?? 0);
   }
 }

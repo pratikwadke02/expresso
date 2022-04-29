@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expresso/models/brew.dart';
-import 'package:expresso/models/brew.dart';
 import 'package:expresso/models/users.dart';
 
 class DatabaseService {
